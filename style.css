@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#layout {
+  display: flex;
+}
+
+#grid {
+  display: flex;
+  flex-direction: column;
+}
+
+#grid .row {
+  display: flex;
+  flex-direction: row;
+}
+
+#grid .row .cell {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  background: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#grid .row .cell:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+#grid .row .cell.growing {
+  background-color: burlywood;
+}
+
+#grid .row .cell.grown {
+  background-color: greenyellow;
+}
+
+#grid .row .cell.expired {
+  background-color: palevioletred;
+}
+
+#seeds {
+  display: flex;
+  flex-direction: column;
+}
+
+#seeds .seed {
+  padding: 5px;
+  background: #eee;
+  margin: 5px;
+}
+
+#seeds .seed:not(.disabled):hover {
+  background: #ddd;
+  cursor: pointer;
+}
+
+#seeds .seed:not(.disabled).selected {
+  background: #ccc;
+}
+
+#seeds .seed.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
